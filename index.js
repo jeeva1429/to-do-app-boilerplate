@@ -15,7 +15,7 @@ const addTheItem =(newTask, callback) => {
     toDoList.append(todotask)
     todotask.innerHTML = newTask
     var EditedItem = document.createElement('a')
-    EditedItem.textContent = 'Edit'
+    EditedItem.textContent = 'x | Edit'
     todotask.append(EditedItem)
     callback(EditedItem,todotask)
 }
