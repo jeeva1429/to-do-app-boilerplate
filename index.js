@@ -14,18 +14,18 @@ const addTheItem =(newTask, callback) => {
     var todotask = document.createElement('li')
     toDoList.append(todotask)
     todotask.innerHTML = newTask
-    var EditedItem = document.createElement('a')
-    EditedItem.textContent = 'x | Edit'
-    todotask.append(EditedItem)
-    callback(EditedItem,todotask)
+    var EditOption = document.createElement('a')
+    EditOption.textContent = 'x | Edit'
+    todotask.append(EditOption)
+    callback(EditOption,todotask)
 }
 
 // This function helps us to edit the entered task
-const editButton = (EditedItem,todotask) => {
-    EditedItem.onclick = () => {
+const editButton = (EditOption,todotask) => {
+    EditOption.onclick = () => {
         var newTask = prompt('Enter your new task')
         newTask === '' ? todotask.textContent:todotask.textContent = newTask
-        todotask.append(EditedItem)
+        todotask.append(EditOption)
     }
 }
 
