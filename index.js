@@ -24,7 +24,7 @@ const addTheItem =(newTask, callback) => {
 const editButton = (EditedItem,todotask) => {
     EditedItem.onclick = () => {
         var newTask = prompt('Enter your new task')
-        todotask.textContent = newTask
+        newTask === '' ? todotask.textContent:todotask.textContent = newTask
         todotask.append(EditedItem)
     }
 }
